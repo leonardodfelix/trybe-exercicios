@@ -1,6 +1,6 @@
 # Trybe
 
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Leonardo Dória Felix](https://www.linkedin.com/in/leonardo-d%C3%B3ria-felix/) enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Leonardo Dória Felix](https://www.linkedin.com/in/leonardo-d%C3%B3ria-felix/) enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa sÃ³ paga quando conseguir um bom trabalho."_
 
