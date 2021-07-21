@@ -187,6 +187,22 @@ Num país onde pra cada 3 farmácias que abre, fecha uma livraria" > phrases2.tx
 	echo -e "\n11. Ordene o arquivo ${RED}bunch_of_things.txt.${NC}"
 	run sort -o bunch_of_things.txt bunch_of_things.txt
 
+	echo -e "\nPermissões\n1. Navegue até a pasta ${RED}unix_tests${NC};"
+	run cd . # ;)
+
+	echo -e "\n2. Rode o comando ${RED}ls -l${NC} e veja quais as permissões dos arquivos;"
+	run ls -l
+
+	echo -e "\n3. Mude a permissão do arquivo ${RED}bunch_of_things.txt${NC} para que todos os usuários possam ter acesso à leitura e escrita, e verifique se está correto com o comando ${RED}ls -l${NC};\nResultado esperado: ${RED}-rw-rw-rw- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt${NC}"
+	run chmod 666 bunch_of_things.txt && ls -l
+	
+	echo -e "\n4. Tire a permissão de escrita do arquivo ${RED}bunch_of_things.txt${NC} para todos os usuários, verifique se está correto com o comando ${RED}ls -l${NC};\nResultado esperado: ${RED}-r--r--r-- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt${NC}"
+	run chmod 444 bunch_of_things.txt && ls -l
+
+	echo -e "\n5. Volte à permissão do arquivo ${RED}bunch_of_things.txt${NC} para a listada inicialmente utilizando o comando ${RED}chmod 644 bunch_of_things.txt${NC}.\nResultado esperado: ${RED}-rw-r--r-- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt${NC}"
+	run chmod 644 bunch_of_things.txt && ls -l
+	
+	
 	wait
 elif [[ $1 != {"parte I","parte II"} ]]; then
 	echo -e "\nUtilize ${RED}./exercicio.sh 'parte I'${NC} ou ${RED}./exercicio.sh 'parte II'${NC} para executar.\n"
