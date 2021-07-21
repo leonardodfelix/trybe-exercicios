@@ -1,5 +1,6 @@
 #!/bin/bash
 
+BOLD='\033[1m'
 RED='\033[0;31m'
 NC='\033[0m' # no color
 
@@ -79,7 +80,7 @@ if [[ $1 == "parte I" ]]; then
 	echo -e "\n13. Limpe o terminal.\nclear"
 	run
 	
-	echo -e "\n\033[1mPara os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :\033[0m\n
+	echo -e "\n${BOLD}Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :\033[0m\n
 		\nInternet
 		\nUnix
 		\nBash
@@ -100,7 +101,7 @@ if [[ $1 == "parte I" ]]; then
 	echo -e "\n16. Apague todos os arquivos que terminem em ${RED}.txt${NC}."
 	run rm *.txt
 	
-	# Manipulação & Busca
+	# 2-Manipulação & Busca
 	echo -e "\nManipulação & Busca\n1. Na pasta ${RED}unix_tests${NC}, baixe um arquivo com os nomes de todos os países do mundo utilizando o comando curl:\n
 curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries""
 	curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
@@ -150,8 +151,42 @@ curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efc
 	man ls
 
 elif [[ $1 == "parte II" ]]; then
-        # Parte II
-        echo -e "\nParte II"
+	# Parte II
+	# 1-Comandos de Input e Output
+	echo -e "\nParte II\n1. Navegue até a pasta ${RED}unix_tests${NC}"
+	run cd unix_tests
+
+	echo -e "\n2. Crie um arquivo texto pelo terminal com o nome ${RED}skills2.txt${NC} e adicione os valores ${RED}Internet${NC} , ${RED}Unix${NC} e ${RED}Bash${NC}, um em cada linha."
+	run echo -e "Internet\nUnix\nBash" > skills2.txt
+
+	echo -e "\n3. Adicione mais 5 itens à sua lista de skills e depois imprima a lista ordenada no terminal. 🤓"
+	run echo -e "Git\nGithub\nHTML\nCSS\nJavascript" >> skills2.txt
+
+	echo -e "\n4. Conte quantas linhas tem o arquivo ${RED}skills2.txt${NC}."
+	run wc -l skills2.txt
+
+	echo -e "\n5. Crie um arquivo chamado ${RED}top_skills.txt${NC} usando o ${RED}skills2.txt${NC}, contendo as 3 primeiras skills em ordem alfabética."
+	run head -3 skills2.txt | sort > top_skills.txt
+
+	echo -e "\n6. Crie um novo arquivo chamado ${RED}phrases2.txt${NC} pelo terminal e adicione algumas frases de sua escolha."
+	run echo -e "A cada som me cobro por mais sabedoria\nMas nesse mundo sem sentido, porque minha música faria\nSeria muita utopia viver de poesia
+Num país onde pra cada 3 farmácias que abre, fecha uma livraria" > phrases2.txt
+
+	echo -e "\n7. Conte o número de linhas que contêm as letras ${RED}br${NC}."
+	run grep br phrases2.txt | wc -l
+
+	echo -e "\n8. Conte o número de linhas que **não** contêm as letras ${RED}br${NC}."
+	run grep -v br phrases2.txt | wc -l
+
+	echo -e "\n9. Adicione dois nomes de países ao final do arquivo ${RED}phrases2.txt${NC}."
+	run echo -e "Brasil\nChina" >> phrases2.txt
+
+	echo -e "\n10. Crie um novo arquivo chamado bunch_of_things.txt com os conteúdos dos arquivos ${RED}phrases2.txt${NC} e ${RED}countries.txt"
+	run cat {phrases2.txt,countries.txt} > bunch_of_things.txt
+
+	echo -e "\n11. Ordene o arquivo ${RED}bunch_of_things.txt.${NC}"
+	run sort -o bunch_of_things.txt bunch_of_things.txt
+
 	wait
 elif [[ $1 != {"parte I","parte II"} ]]; then
 	echo -e "\nUtilize ${RED}./exercicio.sh 'parte I'${NC} ou ${RED}./exercicio.sh 'parte II'${NC} para executar.\n"
