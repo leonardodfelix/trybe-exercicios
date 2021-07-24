@@ -1,3 +1,5 @@
+/* #region Exercício 1 */
+
 .caixa {
   color: white;
   display: inline-block;
@@ -29,7 +31,9 @@
   border: 5px solid black;
 }
 
-/* Posicionamento de elementos - Exercício 3.3 */
+/* #endregion */
+
+/* #region Posicionamento de elementos - Exercício 3.3 */
 
 .super-mario {
   width: 200px;
@@ -73,3 +77,59 @@
   width: 100%;
   position: absolute;
 }
+
+/* #endregion */
+
+/* #region  Seletores*/
+
+.ex3a{
+  margin: 0;
+  padding: 0;
+}
+
+.ex3a h1,
+.ex3a p{
+  text-align: center;
+}
+
+.ex3a li:hover{
+  background-color: yellow;
+}
+
+.ex3a li:active{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ex3a ul{
+  list-style: none;
+}
+
+.ex3b div:hover{
+  border: 2px solid gray;
+}
+
+.ex3b div:nth-of-type(1){
+  color: yellow;
+}
+
+.ex3b div:nth-of-type(2){
+  color: orange;
+}
+
+.ex3b div:nth-of-type(3){
+  color: violet;
+  font-size: 1.5em;
+}
+
+.ex3b div:nth-of-type(4){
+  color: darkblue;
+}
+
+.ex3b div:nth-of-type(5){
+  color: royalblue;
+}
+
+.ex3b div:nth-child(odd){
+  font-style: italic;
+}
+/* #endregion */
