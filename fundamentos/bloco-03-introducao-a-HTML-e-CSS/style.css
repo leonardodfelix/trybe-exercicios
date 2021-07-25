@@ -72,7 +72,7 @@
   z-index: -1;
 }
 
-.wrapper{
+.wrapper {
   top: 15%;
   width: 100%;
   position: absolute;
@@ -82,118 +82,115 @@
 
 /* #region  Seletores*/
 
-.ex3a{
+.ex3a {
   margin: 0;
   padding: 0;
 }
 
-.ex3a h1,
-.ex3a p{
+.ex3a h1, .ex3a p {
   text-align: center;
 }
 
-.ex3a li:hover{
+.ex3a li:hover {
   background-color: yellow;
 }
 
-.ex3a li:active{
+.ex3a li:active {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.ex3a ul{
+.ex3a ul {
   list-style: none;
 }
 
-.ex3b div:hover{
+.ex3b div:hover {
   border: 2px solid gray;
 }
 
-.ex3b div:nth-of-type(1){
+.ex3b div:nth-of-type(1) {
   color: yellow;
 }
 
-.ex3b div:nth-of-type(2){
+.ex3b div:nth-of-type(2) {
   color: orange;
 }
 
-.ex3b div:nth-of-type(3){
+.ex3b div:nth-of-type(3) {
   color: violet;
   font-size: 1.5em;
 }
 
-.ex3b div:nth-of-type(4){
+.ex3b div:nth-of-type(4) {
   color: darkblue;
 }
 
-.ex3b div:nth-of-type(5){
+.ex3b div:nth-of-type(5) {
   color: royalblue;
 }
 
-.ex3b div:nth-child(odd){
+.ex3b div:nth-child(odd) {
   font-style: italic;
 }
+
 /* #endregion */
 
 /* #region Seletores e posicionamento */
 
-.ex-final ol li{
+.ex-final ol li {
   background-color: yellow;
 }
 
-.ex-final ol li:nth-child(even){
+.ex-final ol li:nth-child(even) {
   color: green;
 }
 
-.ex-final ol li:nth-child(odd){
+.ex-final ol li:nth-child(odd) {
   text-transform: uppercase;
 }
 
-.ex-final h1,
-.ex-final h3{
+.ex-final h1, .ex-final h3 {
   color: red;
 }
 
-.ex-final h1 em,
-.ex-final h3 em{
+.ex-final h1 em, .ex-final h3 em {
   font-size: 40px;
   border: 1px solid black;
 }
 
-.ex-final li{
+.ex-final li {
   font-size: 20px;
 }
 
-.ex-final li em{
+.ex-final li em {
   font-weight: bold;
 }
 
-.ex-final ul:nth-of-type(1) li:nth-child(-n+3){
+.ex-final ul:nth-of-type(1) li:nth-child(-n+3) {
   color: blue;
 }
 
-.ex-final ul:nth-of-type(1) li:nth-child(-n+3):not(:first-child){
+.ex-final ul:nth-of-type(1) li:nth-child(-n+3):not(:first-child) {
   background-color: pink;
 }
 
-.ex-final ul:nth-of-type(2) li a[href="https://pt.stackoverflow.com/"]:hover{
+.ex-final a[href="https://pt.stackoverflow.com/"]:hover {
   color: orange;
 }
 
-.ex-final ul:nth-of-type(2) li a[href="https://www.w3schools.com/"]:hover{
+.ex-final a[href="https://www.w3schools.com/"]:hover {
   color: greenyellow;
 }
 
-.ex-final ul:nth-of-type(2) li a[href="https://developer.mozilla.org/pt-BR/"]:hover{
+.ex-final a[href="https://developer.mozilla.org/pt-BR/"]:hover {
   color: black;
 }
 
-.ex-final ul:nth-of-type(2) li a[href="https://devdocs.io/"]:hover{
+.ex-final a[href="https://devdocs.io/"]:hover {
   color: yellow;
 }
 
-.ex-final ul:nth-of-type(2) li a[href="https://app.betrybe.com/"]:hover{
+.ex-final ul:nth-of-type(2) li a[href="https://app.betrybe.com/"]:hover {
   color: green;
 }
 
 /* #endregion */
-
