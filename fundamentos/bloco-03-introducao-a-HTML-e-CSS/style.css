@@ -134,3 +134,66 @@
 }
 /* #endregion */
 
+/* #region Seletores e posicionamento */
+
+.ex-final ol li{
+  background-color: yellow;
+}
+
+.ex-final ol li:nth-child(even){
+  color: green;
+}
+
+.ex-final ol li:nth-child(odd){
+  text-transform: uppercase;
+}
+
+.ex-final h1,
+.ex-final h3{
+  color: red;
+}
+
+.ex-final h1 em,
+.ex-final h3 em{
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+.ex-final li{
+  font-size: 20px;
+}
+
+.ex-final li em{
+  font-weight: bold;
+}
+
+.ex-final ul:nth-of-type(1) li:nth-child(-n+3){
+  color: blue;
+}
+
+.ex-final ul:nth-of-type(1) li:nth-child(-n+3):not(:first-child){
+  background-color: pink;
+}
+
+.ex-final ul:nth-of-type(2) li a[href="https://pt.stackoverflow.com/"]:hover{
+  color: orange;
+}
+
+.ex-final ul:nth-of-type(2) li a[href="https://www.w3schools.com/"]:hover{
+  color: greenyellow;
+}
+
+.ex-final ul:nth-of-type(2) li a[href="https://developer.mozilla.org/pt-BR/"]:hover{
+  color: black;
+}
+
+.ex-final ul:nth-of-type(2) li a[href="https://devdocs.io/"]:hover{
+  color: yellow;
+}
+
+.ex-final ul:nth-of-type(2) li a[href="https://app.betrybe.com/"]:hover{
+  color: green;
+}
+
+/* #endregion */
+
