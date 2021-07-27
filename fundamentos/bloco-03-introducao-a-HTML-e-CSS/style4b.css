@@ -2,6 +2,7 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
+  border: 0;
 }
 
 html, body{
@@ -37,15 +38,14 @@ nav li a{
 main{
   float: left;
   width: 65%;
-  padding: 5px;
-  border: 1px solid black;
+  padding: 20px;
 }
 
 aside{
   text-align: center;
   float: left;
   width: 35%;
-  border: 1px solid black;
+  padding: 10px;
 }
 
 footer{
@@ -67,4 +67,12 @@ th, td{
 
 video{
   width: 100%;
+}
+
+article{
+  padding: 5px;
+}
+
+section{
+  padding: 5px;
 }
