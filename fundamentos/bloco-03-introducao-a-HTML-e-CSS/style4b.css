@@ -35,19 +35,24 @@ nav li a{
 }
 
 main{
-  display: inline-block;
-  width: 64%;
+  float: left;
+  width: 65%;
   padding: 5px;
+  border: 1px solid black;
 }
 
 aside{
-  display: inline-block;
   text-align: center;
+  float: left;
   width: 35%;
+  border: 1px solid black;
 }
 
 footer{
   text-align: center;
+  position: fixed;
+  bottom:0;
+  width: 100%;
 }
 
 table, th, td {
@@ -62,5 +67,4 @@ th, td{
 
 video{
   width: 100%;
-  padding-bottom: 50px;
 }
