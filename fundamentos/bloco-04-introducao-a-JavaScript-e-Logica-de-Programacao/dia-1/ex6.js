@@ -26,5 +26,6 @@ switch (pieceName.toLowerCase()) {
     break;
 
   default:
+    console.log("Invalid piece.");
     break;
 }
