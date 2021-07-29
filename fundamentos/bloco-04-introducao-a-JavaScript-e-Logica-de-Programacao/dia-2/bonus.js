@@ -25,3 +25,16 @@ for (let index = 1; index < decrescNumbers.length; index += 1) {
 console.log(numbers);
 console.log(crescNumbers);
 console.log(decrescNumbers);
+
+let newArray = []
+
+for (let index = 0; index < numbers.length; index++) {
+  let newNumber = numbers[index];
+  if (index === (numbers.length -1)) {
+    newArray.push(newNumber*2);
+  } else {
+    newArray.push(newNumber*numbers[index+1]);
+  }
+}
+
+console.log(newArray);
