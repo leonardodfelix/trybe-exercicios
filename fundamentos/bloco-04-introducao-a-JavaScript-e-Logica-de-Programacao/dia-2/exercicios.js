@@ -23,3 +23,11 @@ let mean = sum / numbers.length;
 console.log("O valor médio do array é:", mean.toFixed(2));
 
 // Ex 4
+
+if (mean > 20){
+  console.log('valor maior que 20');
+} else {
+  console.log('valor menor ou igual a 20');
+}
+
+// Ex 5
