@@ -1,4 +1,4 @@
-let bruto = 3000;
+let bruto = 9000;
 let inss;
 let ir;
 
@@ -15,7 +15,7 @@ if (bruto <= 1556.94) {
 let semiliquido = bruto - inss
 
 if (semiliquido <= 1903.38) {
-  ir = 0
+  ir = 0;
 } else if (semiliquido <= 2826.66) {
   ir = (semiliquido * 0.075) - 142.8;
 } else if (semiliquido <= 3751.06) {
@@ -23,6 +23,6 @@ if (semiliquido <= 1903.38) {
 } else if (semiliquido <= 4664.68) {
   ir = (semiliquido * 0.225) - 636.13;
 } else {
-  ir = (semiliquido * 0.275) - 869.36
+  ir = (semiliquido * 0.275) - 869.36;
 }
-console.log(semiliquido - ir)
+console.log((semiliquido - ir).toFixed(2));
