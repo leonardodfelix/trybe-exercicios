@@ -70,3 +70,13 @@ for (let index = 0; index < numbers.length; index += 1) {
 
 console.log("O menor é", menor);
 
+// Ex 8
+
+let newArray = [];
+
+for (let index = 1; index <= 25; index+= 1) {
+  newArray.push(index);
+}
+
+console.log(newArray);
+
