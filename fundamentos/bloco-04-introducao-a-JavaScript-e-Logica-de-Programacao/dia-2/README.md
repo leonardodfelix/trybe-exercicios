@@ -1,8 +1,8 @@
 # Array e loop For
 
-## Array
+## Conteúdos
 
-### Conteúdos
+### Array
 
 1. Exercício
 * Obtenha o valor *"Serviços"* do array `menu` :
@@ -28,4 +28,9 @@ let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
 
 console.log(menu);
 ```
-
+## For
+1. Exercício
+* Utilize o `for` para imprimir os elementos da lista `groceryList` com o `console.log()` :
+```
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+```
