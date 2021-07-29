@@ -34,3 +34,9 @@ console.log(menu);
 ```
 let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
 ```
+## For/of
+1. Exercício
+* Utilize o `for/of` para imprimir os elementos da lista `names` com o `console.log()` :
+```
+let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+```
