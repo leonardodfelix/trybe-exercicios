@@ -80,3 +80,11 @@ for (let index = 1; index <= 25; index+= 1) {
 
 console.log(newArray);
 
+// Ex 9
+
+let division;
+
+for (let number of newArray) {
+    division = (number / 2).toFixed(2);
+    console.log("Divisão do", number, "por 2 é", division);
+}
