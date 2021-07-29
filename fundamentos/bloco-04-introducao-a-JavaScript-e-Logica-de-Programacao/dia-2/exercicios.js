@@ -31,3 +31,14 @@ if (mean > 20){
 }
 
 // Ex 5
+
+let maior = numbers[0];
+
+for (let index = 0; index < numbers.length; index+= 1) {
+  if (numbers[index] > maior){
+    maior = numbers[index];
+  }
+}
+
+console.log("O maior é", maior);
+
