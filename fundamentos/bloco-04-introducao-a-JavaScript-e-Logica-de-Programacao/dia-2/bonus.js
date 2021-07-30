@@ -28,13 +28,9 @@ console.log(decrescNumbers);
 
 let newArray = []
 
-for (let index = 0; index < numbers.length; index++) {
-  let newNumber = numbers[index];
-  if (index === (numbers.length -1)) {
-    newArray.push(newNumber*2);
-  } else {
-    newArray.push(newNumber*numbers[index+1]);
-  }
+for (let index = 0; index < numbers.length - 1; index++) {
+  newArray.push(numbers[index] * numbers[index + 1]);
 }
+newArray.push(numbers[numbers.length - 1] * 2);
 
 console.log(newArray);
