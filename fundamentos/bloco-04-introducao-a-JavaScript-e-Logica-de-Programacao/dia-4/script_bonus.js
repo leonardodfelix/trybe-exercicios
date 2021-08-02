@@ -47,7 +47,7 @@ function romanosParaIndoArabicos (numeroRomano) {
   return sum;
 }
 
-console.log(romanosParaIndoArabicos('MCDLII'));
+console.log(romanosParaIndoArabicos('MCDXLIV'));
 
 // Ex.2
 
@@ -89,3 +89,18 @@ const basket = [
   'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
   'Banana', 'Pera', 'Abacate', 'Uva',
 ];
+
+function countArraytoObj(array) {
+  let obj = {};
+  for (let string of array) {
+    let str = string;
+    if (!obj[str]) {
+      obj[str] = 1;
+    } else {
+      obj[str] += 1;
+    }
+  }
+  return obj;
+}
+
+console.log(countArraytoObj(basket));
