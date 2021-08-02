@@ -17,10 +17,10 @@ verificaPalindromo('desenvolvimento');
 // Ex.2
 
 let array = [2, 3, 6, 7, 10, 1];
-let maior = array[0];
-let index = 0;
 
 function maiorValor(array) {
+  let maior = array[0];
+  let index = 0;
   for (let num in array) {
     if (array[num] > maior){
       maior = array[num];
@@ -33,4 +33,21 @@ function maiorValor(array) {
 console.log(maiorValor(array));
 
 // Ex.3
+
+let array2 = [2, 4, 6, 7, 10, 0, -3];
+
+function menorValor(array) {
+  let menor = array[0];
+  let index = 0;
+  for (let num in array) {
+    if (array[num] < menor){
+      menor = array[num];
+      index = num;
+    }
+  }
+  return index;
+}
+
+console.log(menorValor(array2));
+
 
