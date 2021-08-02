@@ -3,7 +3,6 @@
 
 function verificaPalindromo(palavra) {
   let arvalap = palavra.split("").reverse().join("");
-
   if (palavra === arvalap) {
     console.log(true);
   } else {
