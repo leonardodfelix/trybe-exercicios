@@ -50,4 +50,20 @@ function menorValor(array) {
 
 console.log(menorValor(array2));
 
+// Ex.4
 
+let nomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+
+function maiorNome(array){
+  let maiorString = array[0];
+  for (let index in array) {
+    if (array[index].length > maiorString.length){
+      maiorString = array[index];
+    }
+  }
+  return maiorString;
+}
+
+console.log(maiorNome(nomes));
+
+// Ex.5
