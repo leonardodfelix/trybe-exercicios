@@ -92,14 +92,36 @@ console.log(maisRepete(numbers));
 
 // Ex.6
 
-function somaDeUmAEne(number){
+function somaDeUmAEne(number) {
   let sum = 0;
-
-  for (let index = 1; index <= number; index +=1) {
+  for (let index = 1; index <= number; index += 1) {
     sum += index;
   }
-
   return sum;
 }
 
 console.log(somaDeUmAEne(10));
+
+// Ex.7
+
+function verificaOFim(strWord, strEnd) {
+  let isEnd = true;
+  let strWordArray = strWord.split("");
+  let strEndArray = strEnd.split("");
+  let indexEnd = strEndArray.length;
+
+  for (let index = strWordArray.length; index > 0; index -= 1) {
+    if (!indexEnd) {
+      break;
+    }
+    if (strWordArray[index] !== strEndArray[indexEnd]) {
+      isEnd = false;
+    };
+    indexEnd -= 1;
+  }
+
+  return isEnd;
+}
+
+console.log(verificaOFim('trybe', 'be'));
+console.log(verificaOFim('joaofernando', 'fernan'));

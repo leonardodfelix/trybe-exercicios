@@ -37,13 +37,10 @@ let otherInfo = {
   recorrente: 'Sim'
 };
 
-let infos = [info, otherInfo]
-
-for (let key in infos){
-  for (let keys in infos[key])
-  if (infos[key][keys] === 'Sim'){
+for (let key in info){
+  if (info[key] === 'Sim' && otherInfo[key] === 'Sim'){
     console.log('Ambos');
   } else {
-    console.log(infos[key][keys] + ' e ' + infos[key][keys]);
+    console.log(info[key] + ' e ' + otherInfo[key]);
   }
 }
