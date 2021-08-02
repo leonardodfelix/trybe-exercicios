@@ -15,3 +15,15 @@ console.log('Bem-vinda, ' + info.personagem);
 info['recorrente'] = 'Sim';
 
 console.log(info);
+
+// Ex.3
+
+for (let key in info){
+    console.log(key);
+}
+
+// Ex.4
+
+for (let key in info){
+  console.log(info[key]);
+}
