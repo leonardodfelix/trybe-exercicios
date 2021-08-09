@@ -11,6 +11,24 @@
   <script>
     const paragraph = document.getElementById("paragraph");
     paragraph.style.color = "red";
+    // 1 first part
+    const title = document.getElementById('page-title');
+    title.innerText = 'Dark waters (2019)';
+    // 2 first part
+    const secondParagraph = document.getElementById('second-paragraph');
+    secondParagraph.innerText = 'Great movie, life lessons.'
+    // 3 first part
+    const subtitle = document.getElementById('subtitle');
+    subtitle.innerText = 'Impression';
+    // 1 second part
+    secondParagraph['id'] = 'paragraph';
+    // 2 second part
+    const paragraphList = document.getElementsByTagName('p');
+    // 3 second part
+    paragraphList[0].style.color = 'blue';
+    // 4 second part
+    const h4List = document.getElementsByTagName('h4');
+    h4List[0].style.color = 'darkblue';
   </script>
 </body>
 
