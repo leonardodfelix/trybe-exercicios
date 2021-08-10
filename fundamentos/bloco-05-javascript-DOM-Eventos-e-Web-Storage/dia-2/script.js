@@ -75,3 +75,14 @@ for (let h3 of h3List) {
 }
 
 // Ex3
+mainTag.removeChild(leftSection);
+
+// Ex4
+rightSection.style.marginRight = 'auto';
+
+// Ex5
+centerSection.style.backgroundColor = 'green';
+
+// Ex6
+ulTag.lastElementChild.remove();
+ulTag.lastElementChild.remove();
