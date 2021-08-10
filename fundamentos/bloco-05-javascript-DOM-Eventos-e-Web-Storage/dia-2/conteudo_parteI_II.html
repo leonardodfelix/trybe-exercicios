@@ -22,6 +22,7 @@
     </section>
   </main>
   <script>
+    // Parte I
     // Ex1
     let ondeEstou = document.getElementById('elementoOndeVoceEsta');
     // Ex2
@@ -41,6 +42,21 @@
     console.log(ondeEstou.nextElementSibling === thirdSon);
     // Ex8
     console.log(meuPai.lastElementChild.previousElementSibling === thirdSon);
+    // Parte II
+    // Ex.1
+    let brother = document.createElement('section');
+    brother.setAttribute('id','mano');
+    meuPai.appendChild(brother);
+    // Ex.2
+    let son = document.createElement('section');
+    son.setAttribute('id','meuGuri');
+    ondeEstou.appendChild(son);
+    // Ex.3
+    let sonOfFirst = document.createElement('section');
+    sonOfFirst.setAttribute('id','guriDoPrimeiro');
+    firstSon.appendChild(sonOfFirst);
+    // Ex.4
+    console.log(sonOfFirst.parentNode.nextElementSibling.nextElementSibling === thirdSon);
   </script>
 </body>
 

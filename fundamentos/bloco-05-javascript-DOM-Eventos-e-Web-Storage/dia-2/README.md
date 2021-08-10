@@ -42,9 +42,10 @@
 7. Agora acesse o `terceiroFilho` a partir de `elementoOndeVoceEsta` .
 8. Agora acesse o `terceiroFilho` a partir de pai .
 ---
-### Parte II
+### Parte II - Criando elementos
 
 1. Crie um irmão para `elementoOndeVoceEsta` .
 2. Crie um filho para `elementoOndeVoceEsta` .
 3. Crie um filho para `primeiroFilhoDoFilho` .
 4. A partir desse filho criado, acesse `terceiroFilho` .
+---
