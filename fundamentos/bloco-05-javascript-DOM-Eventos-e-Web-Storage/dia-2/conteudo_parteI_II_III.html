@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+    // Parte I
+    // Ex1
+    let ondeEstou = document.getElementById('elementoOndeVoceEsta');
+    // Ex2
+    let meuPai = ondeEstou.parentNode;
+    meuPai.style.color = 'red';
+    // Ex3
+    let firstSon = meuPai.firstElementChild;
+    firstSon.innerHTML = "I'm the first son of four sons";
+    // Ex4
+    console.log(meuPai.firstElementChild === firstSon)
+    // Ex5
+    console.log(ondeEstou.previousElementSibling === firstSon);
+    // Ex6
+    console.log(ondeEstou.parentNode.innerText.substring(31,39));
+    // Ex7
+    let thirdSon = document.getElementById('terceiroFilho');
+    console.log(ondeEstou.nextElementSibling === thirdSon);
+    // Ex8
+    console.log(meuPai.lastElementChild.previousElementSibling === thirdSon);
+    // Parte II
+    // Ex.1
+    let brother = document.createElement('section');
+    brother.setAttribute('id','mano');
+    meuPai.appendChild(brother);
+    // Ex.2
+    let son = document.createElement('section');
+    son.setAttribute('id','meuGuri');
+    ondeEstou.appendChild(son);
+    // Ex.3
+    let sonOfFirst = document.createElement('section');
+    sonOfFirst.setAttribute('id','guriDoPrimeiro');
+    firstSon.appendChild(sonOfFirst);
+    // Ex.4
+    console.log(sonOfFirst.parentNode.nextElementSibling.nextElementSibling === thirdSon);
+    // Parte III
+    // Ex.1
+    meuPai.removeChild(firstSon);
+
+    function keepOnlyFirstChild(htmlElement) {
+      let children = htmlElement.children;
+      for (let i = children.length - 1; i > 0; i -= 1) {
+          htmlElement.removeChild(children[i]);
+      }
+    }
+
+    let fatherDad = document.querySelector('#paiDoPai');
+    keepOnlyFirstChild(ondeEstou);
+    keepOnlyFirstChild(meuPai);
+    keepOnlyFirstChild(fatherDad);
+  </script>
+</body>
+
+</html>
