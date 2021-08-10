@@ -16,7 +16,7 @@ bodyTag.appendChild(mainTag);
 const centerSection = document.createElement('section');
 centerSection.className = 'center-content';
 
-bodyTag.appendChild(centerSection);
+mainTag.appendChild(centerSection);
 
 // Ex4
 let pTag = document.createElement('p');
@@ -82,7 +82,7 @@ mainTag.removeChild(leftSection);
 rightSection.style.marginRight = 'auto';
 
 // Ex5
-centerSection.style.backgroundColor = 'green';
+mainTag .style.backgroundColor = 'green';
 
 // Ex6
 ulTag.lastElementChild.remove();
