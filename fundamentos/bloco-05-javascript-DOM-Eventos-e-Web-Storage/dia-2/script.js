@@ -20,6 +20,7 @@ bodyTag.appendChild(centerSection);
 
 // Ex4
 let pTag = document.createElement('p');
+pTag.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nesciunt animi tempora qui harum consequatur. Tenetur repudiandae velit beatae rerum, dignissimos alias cupiditate aut suscipit vitae aliquid! Vitae, esse non.'
 centerSection.appendChild(pTag);
 
 // Ex5
@@ -30,7 +31,7 @@ mainTag.appendChild(leftSection);
 
 // Ex6
 let rightSection = document.createElement('section');
-leftSection.className = 'right-content';
+rightSection.className = 'right-content';
 
 mainTag.appendChild(rightSection);
 
