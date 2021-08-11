@@ -51,7 +51,7 @@ createBtnHoliday('Feriados');
 const btnHoliday = document.getElementById('btn-holiday');
 const holidayList = document.getElementsByClassName('holiday');
 
-btnHoliday.addEventListener('click',showHolidays);
+btnHoliday.addEventListener('click', showHolidays);
 
 let colorHoliday = 'rgb(76,187,23)';
 
@@ -74,15 +74,15 @@ createBtnFriday('Sexta-feira');
 // Ex5
 const btnFriday = document.getElementById('btn-friday');
 const fridayList = document.getElementsByClassName('friday');
-const fridayListNames = [4,11,18,25];
-btnFriday.addEventListener('click',showFridays);
+const fridayListNames = [4, 11, 18, 25];
+btnFriday.addEventListener('click', showFridays);
 
 let fridayText = 'Sexta-feira';
 
 function showFridays() {
   for (let iDay in fridayList) {
-    (fridayList[iDay].innerText === fridayText) 
-    ? fridayList[iDay].innerText = fridayListNames[iDay] : fridayList[iDay].innerText = fridayText;
+    (fridayList[iDay].innerText === fridayText)
+      ? fridayList[iDay].innerText = fridayListNames[iDay] : fridayList[iDay].innerText = fridayText;
   }
 }
 
@@ -105,10 +105,64 @@ function makeSmaller(e) {
 }
 
 // Ex7
-const divTask = document.getElementById('my-tasks');
+const divTask = document.getElementsByClassName('my-tasks')[0];
 
 function createTask(string) {
   let spanTask = document.createElement('span');
   spanTask.innerText = string;
   divTask.appendChild(spanTask);
+}
+
+// Ex8
+function createDiv(stringColor) {
+  let colorDiv = document.createElement('div');
+  colorDiv.className = 'task';
+  colorDiv.style.backgroundColor = stringColor;
+  divTask.appendChild(colorDiv);
+}
+createDiv('red');
+createDiv('yellow');
+createDiv('green');
+createDiv('blue');
+
+
+// Ex9
+let divsColor = document.getElementsByClassName('task');
+
+for (let div of divsColor) {
+  div.addEventListener('click', attribTask);
+}
+
+function clearSelected() {
+  for (let div of divsColor) {
+    div.classList.remove('selected');
+  }
+}
+
+function attribTask(e) {
+  if (e.target.className === 'task') {
+    clearSelected();
+    e.target.className += ' selected';
+  } else { 
+    e.target.className = 'task';
+  }
+}
+
+// Ex10
+function checkForSelected(){
+  return (document.getElementsByClassName('selected')) ? true : false;
+}
+
+for (let day of daysList) {
+  day.addEventListener('click',changeDayColor);
+}
+
+function changeDayColor(e){
+  if (checkForSelected() && e.target.classList.length === 1) {
+    e.target.style.color = document.getElementsByClassName('selected')[0].style.backgroundColor;
+    e.target.classList.add('changed');
+  } else {
+    e.target.style.color = 'rgb(119,119,119';
+    e.target.classList.remove('changed');
+  }
 }
