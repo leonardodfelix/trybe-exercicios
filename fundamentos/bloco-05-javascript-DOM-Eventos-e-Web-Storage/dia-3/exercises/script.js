@@ -24,10 +24,10 @@ function createDezDays(array) {
     liDay.className = 'day';
     liDay.innerText = day;
     if (day === 24 | day === 25 | day === 31) {
-      liDay.className += ' holiday';
+      liDay.classList.add('holiday');
     }
     if (day === 4 | day === 11 | day === 18 | day === 25) {
-      liDay.className += ' friday';
+      liDay.classList.add('friday');
     }
     ulDays.appendChild(liDay);
   }
@@ -143,26 +143,50 @@ function attribTask(e) {
   if (e.target.className === 'task') {
     clearSelected();
     e.target.className += ' selected';
-  } else { 
+  } else {
     e.target.className = 'task';
   }
 }
 
 // Ex10
-function checkForSelected(){
+function checkForSelected() {
   return (document.getElementsByClassName('selected')) ? true : false;
 }
 
 for (let day of daysList) {
-  day.addEventListener('click',changeDayColor);
+  day.addEventListener('click', changeDayColor);
 }
 
-function changeDayColor(e){
+function changeDayColor(e) {
   if (checkForSelected() && e.target.classList.length === 1) {
     e.target.style.color = document.getElementsByClassName('selected')[0].style.backgroundColor;
     e.target.classList.add('changed');
   } else {
-    e.target.style.color = 'rgb(119,119,119';
+    e.target.style.color = 'rgb(119,119,119)';
     e.target.classList.remove('changed');
+  }
+}
+
+// Bônus
+const ulTaskList = document.querySelector('.task-list');
+
+const inputTag = document.getElementById('task-input');
+
+const btnAdd = document.getElementById('btn-add');
+
+btnAdd.addEventListener('click', addTask);
+inputTag.addEventListener('keyup',addTask);
+
+function addTask(e) {
+  if (!inputTag.value) {
+    alert('Erro, escreve algum compromisso.');
+  } else if (e.target === btnAdd) {
+    let task = document.createElement('li');
+    task.innerText = inputTag.value;
+    ulTaskList.appendChild(task);
+  } else if (e.code === 'Enter' | e.code === 'NumpadEnter') {
+    let task = document.createElement('li');
+    task.innerText = inputTag.value;
+    ulTaskList.appendChild(task);
   }
 }
