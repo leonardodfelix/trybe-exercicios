@@ -1,20 +1,31 @@
-const firstLi = document.getElementById('first-li');
-const secondLi = document.getElementById('second-li');
-const thirdLi = document.getElementById('third-li');
+const firstLi = document.getElementById('firstLi');
+const secondLi = document.getElementById('secondLi');
+const thirdLi = document.getElementById('thirdLi');
 const input = document.getElementById('input');
-const myWebpage = document.getElementById('my-spotrybefy');
+const myWebpage = document.getElementById('mySpotrybefy');
 
 /*
  Copie esse arquivo e edite apenas ele;
  Crie uma função que adicione a classe 'tech' ao elemento selecionado;
  */
-function addClassTech(element) {
-  element.className = 'tech';
+const liList = document.getElementsByTagName('li');
+for (let li of liList) {
+  li.addEventListener('click', addClassTech);
+}
+function addClassTech(event) {
+  resetClassTech();
+  event.target.className = 'tech';
+}
+function resetClassTech() {
+  for(let li of liList) {
+    li.className = '';
+  }
 }
  /*
 1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
  Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 com a classe 'tech';*/
+input.addEventListener('input', changeSelectedToInput);
 function changeSelectedToInput() {
   let techElement = document.getElementsByClassName('tech')[0];
   techElement.innerText = input.value;
@@ -23,12 +34,22 @@ function changeSelectedToInput() {
  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 redirecione para alguma página;
 */
-
+myWebpage.addEventListener('dblclick',goToWebsite);
+function goToWebsite(event) {
+  // console.log(event.target);
+  // console.log(event.type);
+  window.open('https://leonardodfelix.github.io/', '_blank');
+}
 /*
 1. Que tal redirecionar para seu portifólio?
  Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-a cor do mesmo;
+a cor do mesmo;*/
+myWebpage.addEventListener('mouseover',changeColor);
+function changeColor(event) {
+  event.target.style.color = 'green';
+}
 
+/*
 Segue abaixo um exemplo do uso de event.target:
 */
 
