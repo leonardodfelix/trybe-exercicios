@@ -74,8 +74,12 @@ createBtnFriday('Sexta-feira');
 // Ex5
 const btnFriday = document.getElementById('btn-friday');
 const fridayList = document.getElementsByClassName('friday');
-const fridayListNames = [4, 11, 18, 25];
+const fridayListNames = [];
 btnFriday.addEventListener('click', showFridays);
+
+for (let i = 0; i < fridayList.length; i += 1) {
+  fridayListNames.push(fridayList[i].innerHTML);
+}
 
 let fridayText = 'Sexta-feira';
 
