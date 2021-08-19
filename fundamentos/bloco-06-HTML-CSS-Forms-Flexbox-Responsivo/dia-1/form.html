@@ -33,13 +33,13 @@
         <label for="state">Estado
           <select name="state" id="state" required></select>
         </label>
-        <p>Tipo:</p>
+        <p>Tipo de residência:</p>
         <div>
           <label for="apto">
-            <input type="radio" name="home" id="apto" required>Apartamento
+            <input type="radio" name="home" id="apto" value="apto" required>Apartamento
           </label>
           <label for="casa">
-            <input type="radio" name="home" id="casa" required>Casa
+            <input type="radio" name="home" id="casa" value="casa" required>Casa
           </label>
         </div>
       </div>
@@ -51,13 +51,13 @@
       <textarea name="resume" id="resume" cols="60" rows="10" maxlength="1000" required></textarea>
       <br>
       <label for="job">Cargo</label>
-      <input type="text" name="job" id="job" max="40" required>
+      <input type="text" name="job" id="job" maxlength="40" required>
       <br>
       <label for="job-description">Descrição do cargo</label>
-      <input type="text" name="job-description" id="job-description" required>
+      <input type="text" name="job-description" id="job-description" maxlength="500" required>
       <br>
       <label for="initial-date">Data de início</label>
-      <input type="text" name="initial-date" id="initial-date" required>
+      <input type="text" name="initial-date" id="initial-date" maxlength="10" required>
     </fieldset>
     <br>
     <div id="buttons">
