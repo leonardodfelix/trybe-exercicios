@@ -1,0 +1,15 @@
+.button {
+  background-color: cadetblue;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-left: 15px;
+}
+
+#clearAll {
+  background-color: darkred;
+}
+
+input[type=text] {
+  
+}
