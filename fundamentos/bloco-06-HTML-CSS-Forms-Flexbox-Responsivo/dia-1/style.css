@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+body:not(header) {
+  background-color: #DADADA;
+}
+
+header {
+  border: 1px solid #AAA;
+  box-shadow: 1px 1px 3px;
+  text-align: center;
+  background-image: linear-gradient(#FFF, #DDD);
+  width: 80%;
+  margin: 5px auto 15px auto;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+fieldset {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #EEE;
+}
+
+#buttons {
+  width: 90%;
+  margin: auto;
+}
+
+.button {
+  background-color: rgba(64, 191, 96, 0.8);
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin: 0 0 20px 15px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#clear-all {
+  background-color: rgba(191, 64, 64, 0.8);
+}
+
+label {
+  display: block;
+}
+
+.col-left {
+  float: left;
+  width: 40%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.col-left * {
+  margin: 3px;
+}
+
+.col-right {
+  float:right;
+  width: 50%;
+  line-height: 1.5;
+}
+
+#curriculumOutput {
+  width: 90%;
+  height: 500px;
+}
