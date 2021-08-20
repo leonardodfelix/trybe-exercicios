@@ -1,0 +1,17 @@
+{
+  "name": "dia-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "just-validate": "^1.5.0",
+    "tailwindcss": "^2.2.7"
+  }
+}

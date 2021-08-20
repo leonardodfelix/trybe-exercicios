@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Forms</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- https://github.com/horprogs/Just-validate -->
+  <link rel="stylesheet" href="./node_modules/just-validate/dist/css/justValidateTooltip.min.css">
+  <!-- https://github.com/AlexKrupko/DatePickerX -->
+  <link rel="stylesheet" href="./DatePickerX-master/dist/css/DatePickerX.min.css">
+  <script src="./DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Visualizar Currículo</h1>
+    <p>Digite os dados abaixo e clique em enviar para visualizar.</p>
+  </header>
+  <form id="curriculum-form" class="js-form" action="" method="GET">
+    <fieldset id="personal-data" class="row mb-3">
+      <legend>Dados pessoais</legend>
+      <div class="row mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="name" id="name" class="form__input form-control" maxlength="40" placeholder="Digite seu nome completo" autocomplete="off" data-validate-field="name" required>
+        <label for="email" class="form-label">E-mail</label>
+        <input type="text" name="email" id="email" class="form-control" autocomplete="off" placeholder="Digite seu e-mail" data-validate-field="email" required>
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" class="form-control" autocomplete="off" placeholder="Digite seu CPF" data-validate-field="cpf" required>
+      </div>
+      <div class="col-right">
+        <label for="qth" class="form-label">Endereço</label>
+        <input type="text" name="qth" id="qth" class="form-control" autocomplete="off" required>
+        <label for="city" class="form-label"> Cidade</label>
+        <input type="text" name="city" id="city" class="form-control" autocomplete="off" required>
+        <label for="state" class="form-label">Estado
+          <select name="state" id="state" class="form-select" aria-label="Default select example"></select>
+        </label>
+        <p>Tipo de residência:</p>
+        <div>
+          <label for="apto" class="col-form-label col-sm-2 pt-0">
+            <input type="radio" name="home" id="apto" value="apto" required>Apartamento
+          </label>
+          <label for="casa" class="form-label">
+            <input type="radio" name="home" id="casa" value="casa" required>Casa
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset id="job-data">
+      <legend>Dados do último emprego</legend>
+      <label for="resume" class="form-label">Resumo do currículo:</label>
+      <textarea class="form-control" name="resume" id="resume" cols="60" rows="3"></textarea>
+      <br>
+      <label for="job" class="form-label">Cargo</label>
+      <input type="text" name="job" id="job" class="form-control" required>
+      <br>
+      <label for="job-description" class="form-label">Descrição do cargo</label>
+      <input type="text" name="job-description" id="job-description" class="form-control" required>
+      <br>
+      <label for="initial-date" class="form-label">Data de início</label>
+      <input type="text" name="initial-date" id="initial-date" class="form-control" required>
+    </fieldset>
+    <br>
+    <div id="buttons">
+      <button type="submit" id="submit-button" class="btn btn-primary">Enviar</button>
+      <button id="clear-all" class="btn btn-secondary">Limpar</button>
+    </div>
+  </form>
+  <hr>
+  <div id="curriculumOutput">
+  </div>
+  <!-- https://github.com/horprogs/Just-validate -->
+  <script src="script.js" type="module"></script> 
+</body>
+
+</html>

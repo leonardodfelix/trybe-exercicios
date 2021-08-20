@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DatePickerX</title>
+
+    <script src="../dist/js/DatePickerX.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function()
+        {
+            var $min = document.querySelector('.real [name="realDPX-min"]'),
+                $max = document.querySelector('.real [name="realDPX-max"]');
+
+            $min.DatePickerX.init({
+                mondayFirst: true,
+                minDate    : new Date(2021, 5, 9),
+                maxDate    : $max
+            });
+
+            $max.DatePickerX.init({
+                mondayFirst: true,
+                minDate    : $min,
+                maxDate    : function()
+                {
+                    var date = new Date();
+                    return new Date().setDate(date.getDate() + 10);
+                },
+                clearButton: false
+            });
+
+        });
+    </script>
+    <link rel="stylesheet" href="../dist/css/DatePickerX.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+        label {
+            display: inline-block; 
+            margin-bottom: 500px;
+            width: 30%;
+        }
+        .real {
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <label class="real">
+        <input type="text" name="realDPX-min" placeholder="Choice start date">
+    </label>
+
+    <label class="real">
+        <input type="text" name="realDPX-max" placeholder="Choice end date">
+    </label>
+</div>
+
+</body>
+</html>

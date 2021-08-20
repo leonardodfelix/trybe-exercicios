@@ -1,0 +1,5 @@
+/.idea/
+/node_modules/
+.htaccess
+.DS_Store
+package-lock.json
