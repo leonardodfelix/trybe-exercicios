@@ -624,8 +624,8 @@ html {
 * Os itens dentro do elemento navigation devem aparecer cada um em sua própria linha;
 * O elemento com id header deve ser fixo, de forma que ele fique aparecendo sempre no topo da tela mesmo após o usuário rolar a página.
 
-![Exercise 3 before small phone](imgs/exercise_3_before_small_phone.png)
+![Exercise 3 before small phone](imgs/exercise_3_before_small_phone.png)  
 **240x320: tela pequena**  
 
-![Exercise 3 before android](imgs/exercise_3_before_android.png)
+![Exercise 3 before android](imgs/exercise_3_before_android.png)  
 **360x640 tela de smartphone**
