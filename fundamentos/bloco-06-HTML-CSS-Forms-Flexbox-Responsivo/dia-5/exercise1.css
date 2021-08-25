@@ -1,0 +1,58 @@
+body {
+  margin: 20px;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 20px;
+}
+
+p {
+  font-size: large;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: linear-gradient(#EEE, #666);
+    margin: 10px;
+  }
+  p {
+    font-size: larger;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main figure {
+    flex-basis: 40%;
+  }
+  main h2 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: linear-gradient(#EEE, yellow);
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: xx-large;
+  }
+  p {
+    font-size: x-large;
+  }
+  h2 {
+    font-size: xx-large;
+  }
+}
