@@ -19,7 +19,7 @@ testingScope(true);
 
 // Exercício 2
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-const sortedOddsAndEvens = [...oddsAndEvens].sort((a, b) => a - b) 
+const sortedOddsAndEvens = [...oddsAndEvens].sort((a, b) => a - b)
 
 console.log(`Os números ${sortedOddsAndEvens} se encontram ordenados de forma crescente!`); // será necessário alterar essa linha 😉
 console.log(oddsAndEvens);
@@ -27,7 +27,7 @@ console.log(oddsAndEvens);
 // Parte II
 // Exercício 1
 function fatorial(n) {
-  return (n <= 1) ? 1 : n * fatorial(n - 1);
+  return (n >= 1) ? n * fatorial(n - 1) : 1;
   // let fat = 1;
   // for (let index = 1; index <= n; index += 1) {
   //   fat *= index;
@@ -44,3 +44,28 @@ const phrase = "Antônio foi no banheiro e não sabemos o que aconteceu";
 console.log(longestWord(phrase));
 console.log(phrase);
 
+// Exercício 3
+window.onload = () => {
+  const button = document.getElementById('button');
+  const output = document.getElementById('output');
+  let click = 0;
+
+  button.addEventListener('click', () => {
+    click += 1;
+    (click === 1) ? output.innerHTML = `${click} click` : output.innerHTML = `${click} clicks`;
+  });
+}
+
+// Exercício 4
+
+function changeX(string, name) {
+  const array = string.split(' ');
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === 'x') {
+      array[index] = name;
+    }
+  }
+  return array.join(' ');
+}
+
+console.log(changeX("Tryber x aqui!", "Bebeto"));
