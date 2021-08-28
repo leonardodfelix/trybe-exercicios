@@ -1,7 +1,7 @@
 // Parte I
 // Exercício 1
 
-const testingScope = (escopo) => {
+const testingScope = escopo => {
   if (escopo === true) {
     var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
     ifScope = `${ifScope}\nótimo, fui utilizada no escopo !`;
@@ -12,7 +12,8 @@ const testingScope = (escopo) => {
   }
 }
 
-const testShorter = escopo => console.log(escopo ? 'Não devo ser utilizada fora do meu escopo (if)\nótimo, fui utilizada no escopo !' : 'Não devo ser utilizada fora meu escopo (else)');
+const testShorter = escopo => console.log(escopo ? `Não devo ser utilizada fora do meu escopo (if)
+ótimo, fui utilizada no escopo !` : 'Não devo ser utilizada fora meu escopo (else)');
 
 testShorter(false);
 testingScope(true);
@@ -57,6 +58,7 @@ window.onload = () => {
 }
 
 // Exercício 4
+// Função 1
 
 function changeX(string, name) {
   const array = string.split(' ');
@@ -68,4 +70,14 @@ function changeX(string, name) {
   return array.join(' ');
 }
 
-console.log(changeX("Tryber x aqui!", "Bebeto"));
+const changeResult = changeX("Tryber x aqui!", "Bebeto");
+ 
+console.log(changeResult);
+
+// Função 2
+function printSkills(changeFunction, skillsArray) {
+  console.log(`${changeFunction} Minhas cinco principais habilidades são:
+- ${skillsArray.join('\n- ')}`);
+}
+
+printSkills(changeResult, ['HTML', 'CSS', 'Git', 'Javascript', 'Python']);
