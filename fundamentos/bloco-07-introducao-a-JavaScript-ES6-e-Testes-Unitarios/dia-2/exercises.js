@@ -53,3 +53,83 @@ const orderModifier = (order) => {
 
 const result2 = orderModifier(order);
 console.log(result2);
+
+// Parte 2
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+// 1 de 8
+function addKeyValue(targetObj, key, value) {
+  targetObj[key] = value;
+}
+
+addKeyValue(lesson2, 'turno', 'manhã');
+console.table(lesson2);
+
+// 2 de 8
+function listKeys(targetObj) {
+  console.log(Object.keys(targetObj));
+}
+listKeys(lesson1);
+
+// 3 de 8
+function showObjSize(targetObj) {
+  console.log(Object.keys(targetObj).length);
+}
+showObjSize(lesson3);
+
+// 4 de 8
+function listValues(targetObj) {
+  console.log(Object.values(targetObj));
+}
+listValues(lesson2);
+
+// 5 de 8
+const allLessons = Object.assign({}, {lesson1}, {lesson2}, {lesson3});
+console.log(allLessons);
+
+// 6 de 8
+function somaEstudantes(targetObj) {
+  const lessons = Object.values(targetObj);
+  let sum = 0;
+  lessons.forEach((lesson) => sum += lesson.numeroEstudantes);
+  return sum;
+}
+
+console.log(somaEstudantes(allLessons));
+
+// 7 de 8
+function getValueByNumber(lessonObj, num) {
+  return Object.values(lessonObj)[num];
+}
+
+console.log(getValueByNumber(lesson1, 0));
+// Output: 'Matématica'
+
+// 8 de 8
+function verifyPair(lessonObj, lessonKey, keyValue) {
+  return (lessonObj[lessonKey] === keyValue) ? true : false;
+}
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
+
