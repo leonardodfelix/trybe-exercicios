@@ -102,7 +102,7 @@ function listValues(targetObj) {
 listValues(lesson2);
 
 // 5 de 8
-const allLessons = Object.assign({}, {lesson1}, {lesson2}, {lesson3});
+const allLessons = Object.assign({}, { lesson1 }, { lesson2 }, { lesson3 });
 console.log(allLessons);
 
 // 6 de 8
@@ -133,3 +133,29 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
 
+// Bônus
+// 1 de 2
+function somaEstudantesMat(targetObj) {
+  const lessons = Object.values(targetObj);
+  let sum = 0;
+  lessons.forEach((lesson) => (lesson.materia === 'Matemática') ? sum += lesson.numeroEstudantes : sum);
+  return sum;
+}
+
+console.log(somaEstudantesMat(allLessons));
+
+// 2 de 2
+function createReport(lessonsObj, professor) {
+  const lessons = Object.values(lessonsObj);
+  let estudantes = 0;
+  let aulas = [];
+  lessons.forEach((lesson) => {
+    if (lesson.professor === professor) {
+      estudantes += lesson.numeroEstudantes;
+      aulas.push(lesson.materia);
+    }
+  });
+  return {professor, aulas, estudantes};
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
