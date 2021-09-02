@@ -32,7 +32,7 @@ const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 const checkAnswer = (rightAnswer, studentAnswer) => {
   if (studentAnswer === 'N.A') return 0;
   if (studentAnswer === rightAnswer) return 1;
-  return - 0.5;
+  return -0.5;
 }
 
 const calculateGrade = (rightAnswers, studentAnswers, checkAnswer) => {
