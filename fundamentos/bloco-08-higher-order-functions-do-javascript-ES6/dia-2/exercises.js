@@ -171,8 +171,7 @@ assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult6);
 const expectedResult7 = false;
 
 function authorUnique() {
-  return books.every((book) => !books.some((book2) => (book2.author.birthYear === book.author.birthYear)
-      && (book2.author.name !== book.author.name)));
+  return books.every((book) => !books.some((book2) => (book2.author.birthYear === book.author.birthYear) && (book2.author.name !== book.author.name)));
 }
 
 assert.strictEqual(authorUnique(), expectedResult7);
