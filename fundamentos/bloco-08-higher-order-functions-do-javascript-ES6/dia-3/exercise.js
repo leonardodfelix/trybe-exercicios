@@ -198,5 +198,32 @@ assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
 // #endregion
 
 // #region 5 de 7
+const expectedResult5 = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
 
+function fantasyOrScienceFictionAuthors() {
+  const fantOrSciFiBooks = fantasyOrScienceFiction();
+  const authorList = fantOrSciFiBooks.map( book => book.author.name);
+  return authorList.sort();
+}
+
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult5);
+// #endregion
+
+// #region 6 de 7
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+function oldBooks() {
+  // escreva seu código aqui
+}
+
+assert.deepStrictEqual(oldBooks(), expectedResult);
 // #endregion
