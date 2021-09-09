@@ -120,5 +120,22 @@ assert.deepStrictEqual(longestNamedBook(), expectedResult);
 //#endregion
 
 //#region 5 de 6
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+function containsA() {
+  return names.reduce((aTimes, word) => {
+    const aQuantity = word.toLowerCase().split('').reduce((aOcurr, letter) => (letter === 'a') ? aOcurr += 1 : aOcurr, 0);
+    return aTimes + aQuantity;
+  }, 0);
+}
+
+assert.deepStrictEqual(containsA(), 20);
+//#endregion
+
+//#region 6 de 6
 
 //#endregion
