@@ -90,3 +90,35 @@ function reduceNames() {
 assert.strictEqual(reduceNames(), expectedResult2);
 //#endregion
 
+//#region 3 of 6
+const expectedResult3 = 43;
+
+function averageAge() {
+  return books.reduce((sum, book) => sum + (book.releaseYear - book.author.birthYear), 0) / books.length;
+}
+
+assert.strictEqual(averageAge(), expectedResult3);
+//#endregion
+
+//#region 4 de 6
+const expectedResult = {
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  genre: 'Fantasia',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
+};
+
+function longestNamedBook() {
+  return books.reduce((longName, book) => (longName.name.length > book.name.length) ? longName : book);
+}
+
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
+//#endregion
+
+//#region 5 de 6
+
+//#endregion
