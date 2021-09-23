@@ -1,30 +1,3 @@
-# Jest - Testes Assíncronos
-
-## Callback test
-
-```js
-const asyncSum = (a, b, callback) => {
-  setTimeout(() => {
-    const result = a + b;
-    callback(result);
-  }, 500);
-};
-
-test('Testando asyncSum, soma 5 mais 10', (done) => {
-  asyncSum(5, 10, (result) => {
-    try {
-      expect(result).toBe(15);
-      done();
-    } catch (error) {
-      done(error);
-    }
-  });
-});
-```
-
-## Promises
-
-```js
 const Animals = [
   { name: 'Dorminhoco', age: 1, type: 'Dog' },
   { name: 'Soneca', age: 2, type: 'Dog' },
@@ -81,4 +54,3 @@ describe('Quando o tipo do animal, não existe', () => {
     ));
   });
 });
-```
