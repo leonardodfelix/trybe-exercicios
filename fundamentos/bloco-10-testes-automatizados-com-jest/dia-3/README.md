@@ -1,0 +1,2 @@
+# Jest - Simulando comportamentos
+
