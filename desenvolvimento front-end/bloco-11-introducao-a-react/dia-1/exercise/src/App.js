@@ -1,15 +1,28 @@
 import './App.css';
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 
-const taskList = ['Lavar a louça', 'Fazer compras', 'Fornicar'];
+// const taskList = ['Lavar a louça', 'Fazer compras', 'Fornicar'];
 
-const Task = (value) => {
+// const Task = (value) => {
+//   return (
+//     <li>{value}</li>
+//   );
+// }
+
+// function App() {
+//   return taskList.map(task => Task(task));
+// }
+
+const App = () => {
   return (
-    <li>{value}</li>
+    <div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
   );
-}
-
-function App() {
-  return taskList.map(task => Task(task));
 }
 
 export default App;
