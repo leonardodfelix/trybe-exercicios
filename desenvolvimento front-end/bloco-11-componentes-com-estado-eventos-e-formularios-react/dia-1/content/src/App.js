@@ -1,20 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './App.css';
+import ColorsClicker from './Components/ColorsClicks';
+import GreenForEvens from './Components/GreenForEvens';
 
 class App extends Component {
-  constructor() {
-    super();
-
-    this.handleClick = this.handleClick.bind(this);
-
-  }
-
-  handleClick() {
-    console.log(this);
-    console.log('Botão clicado');
-  }
-
   render() {
-    return <button onClick={this.handleClick}>Meu botão</button>
+    return (
+      <>
+        <ColorsClicker />
+        <hr/>
+        <GreenForEvens />
+      </>
+    )
   }
 }
 
