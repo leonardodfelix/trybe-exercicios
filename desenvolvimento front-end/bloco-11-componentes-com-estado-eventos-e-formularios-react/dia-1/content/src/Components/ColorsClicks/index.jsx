@@ -45,9 +45,9 @@ export default class ColorsClicker extends Component {
           <div className="green">Green: {this.state.greenClicks}</div>
           <div className="blue">Blue: {this.state.blueClicks}</div>
         </div>
-        <div id="result" style={`backgroundColor:rgb(${this.state.redClicks * 10},
+        <div id="result" style={{backgroundColor:`rgb(${this.state.redClicks * 10},
           ${this.state.greenClicks * 10},
-          ${this.state.blueClicks * 10})`}></div>
+          ${this.state.blueClicks * 10})`}}></div>
       </>
     )
   }
