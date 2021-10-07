@@ -25,7 +25,7 @@ export default class ColorsClicker extends Component {
     return (
       <>
         <button onClick={this.handleClick} 
-          style={{backgroundColor:`${this.state.buttonColor}`}}>
+          style={`backgroundColor:${this.state.buttonColor}`}>
             Green For Even Numbers Button
         </button>
         <div className="green">Clicks: {this.state.clicks}</div>
