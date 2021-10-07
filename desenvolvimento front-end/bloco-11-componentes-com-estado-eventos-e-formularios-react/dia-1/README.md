@@ -134,3 +134,16 @@ Agora bora pra aula ao vivo e depois pros exercícios?! Hoje nós vamos incremen
 
 
 ---
+
+## Exercise
+
+### Agora a prática  
+
+Hoje você vai incrementar a sua Pokedex utilizando Estado .  
+
+Você pode encontrar informações mais detalhadas no [repositorio do exercício!](https://github.com/tryber/exercise-pokedex-state)  
+
+![pokedex app image](content/src/pokedex.gif)
+**Como ficará a sua pokedex**  
+
+🦜 **Dica:** Você pode armazenar no estado do componente pai da aplicação o pokemon sobre o qual está iterando no momento e os filtros aplicados sobre a lista.  
