@@ -6,7 +6,7 @@
 
 Copie o código abaixo e no seu editor de código, teste as possibilidades para a propriedade `align-self` .
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -57,7 +57,7 @@ Copie o código abaixo e no seu editor de código, teste as possibilidades para 
 
 Copie o código abaixo e teste as possibilidades de ordenação.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -129,7 +129,7 @@ Copie o código abaixo e teste as possibilidades de ordenação.
 
 1. Teste as possibilidades para a propriedade `flex-grow` .
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -197,7 +197,7 @@ Copie o código abaixo e teste as possibilidades de ordenação.
 
 2. Teste as possibilidades para a propriedade `flex-shrink` .
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -268,7 +268,7 @@ Copie o código abaixo e teste as possibilidades de ordenação.
 
 3. Teste as possibilidades para a propriedade `flex-basis` .
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -330,7 +330,7 @@ Copie o código abaixo e teste as possibilidades de ordenação.
 
 ### Parte I
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -359,7 +359,7 @@ Copie o código abaixo e teste as possibilidades de ordenação.
   </body>
 </html>
 ```
-```
+```css
 * {
   margin: 0;
   padding: 0;
@@ -415,7 +415,7 @@ body {
 ![header](./imgs/header4.jpeg)
 
 ### Parte II
-```
+```html
     <main class="main-container">
       <section class="movie-container">
         <section>
@@ -462,7 +462,7 @@ body {
 </main>
 ```
 
-```
+```css
 .main-container {
   display: flex;
   flex-wrap: wrap;

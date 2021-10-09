@@ -5,7 +5,7 @@
 # Parte II
 
 ---
-```
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -33,7 +33,7 @@
 </html>
 ```
 ---
-```
+```css
 body {
   align-items: center;
   background-color: #333;
@@ -106,7 +106,7 @@ input:focus {
 }
 ```
 ---
-```
+```js
 const firstLi = document.getElementById('first-li');
 const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
@@ -147,7 +147,7 @@ firstLi.addEventListener('dblclick', resetText);
 
 ![calendario](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/javascript/dom-manipulation/gif/calendario-0a0d72ae91dc4119dd55d8cd379c9b29.gif)
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -196,7 +196,7 @@ firstLi.addEventListener('dblclick', resetText);
 </html>
 ```
 ---
-```
+```css
 
 * {
   margin: 0;
@@ -359,7 +359,7 @@ O array `dezDaysList` contém os dois últimos dias de novembro e os dias do mê
 * Os dias devem estar contidos em uma tag `<li>` , e todos devem ter a classe day . Ex: `<li class="day">3</li>`
 * Os dias 24, 25 e 31 são feriados e, além da classe `day` , devem conter também a classe `holiday` . Ex: `<li class="day holiday">24</li>`
 * Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe `day` e a classe `friday` . Ex: `<li class="day friday">4</li>`
-```
+```js
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 ```
 ### Exercício 2:

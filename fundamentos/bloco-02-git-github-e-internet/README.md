@@ -3,12 +3,12 @@
 ## Git
 
 Install:
-```
+```sh
 sudo apt install git
 ```
 
 Config:
-```
+```sh
 git config --global user.name "Seu nome"
 git config --global user.email seuemail@exemplo.br
 ```
@@ -19,13 +19,13 @@ git config --global user.email seuemail@exemplo.br
 `https://github.com/`
 
 SSH:
-```
+```sh
 ssh-keygen -t rsa -b 4096 -C "seuemail@gmail.com"
 ```
 Default path `/home/you/.ssh/id_rsa`
 
 SSH key to SSH-agent
-```
+```sh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```

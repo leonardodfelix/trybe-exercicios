@@ -4,7 +4,7 @@
 
 ### Parte II - Seletores de elementos
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <body>
@@ -38,7 +38,7 @@ Vamos consolidar a manipulação dos elementos `HTML` , colocando a cor do Admin
 
 ![Imagem Trybe Course](conteudo_parte3_image.png)
 
-```
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -78,7 +78,7 @@ Vamos consolidar a manipulação dos elementos `HTML` , colocando a cor do Admin
 </html>
 ```
 CSS
-```
+```css
 * {
   margin: 0;
 }
@@ -137,7 +137,7 @@ CSS
 
 ### Funções de manipulação do DOM
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>

@@ -18,7 +18,7 @@
 * `previousElementSibling` : retorna o elemento anterior.  
 ---
 
-```
+```html
 <main id="paiDoPai">
   <section id="pai">
     <section id="primeiroFilho"></section>
@@ -55,7 +55,7 @@
 ---
 ## Exercícios
 ---
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>

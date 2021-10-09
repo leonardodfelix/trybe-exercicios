@@ -3,11 +3,11 @@
  🚀 Excute o script para rodar os comandos dos exercícios do **Bloco 1 - Unix & Bash**  
 
  * Parte I
- ```
+ ```sh
  ./exercicios.sh "parte I"
  ```
  * Parte II
- ```
+ ```sh
  ./exercicios.sh "parte II"
  ```
 
@@ -66,7 +66,7 @@ SQL
 
 1. Na pasta `unix_tests`, baixe um arquivo com os nomes de todos os países do mundo utilizando o comando curl:  
 
-```  
+```sh
 curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
 ```  
 

@@ -4,7 +4,7 @@
 
 ### Objetos
 1. Crie um objeto `player` contendo as variáveis listadas abaixo.  
-```
+```js
 let name = 'Marta';
 let lastName = 'Silva';
 let age = 34;
@@ -14,7 +14,7 @@ let medals = { golden: 2, silver: 3 };
 2. Acesse as chaves `name` , `lastName` e `age` e concatene as suas informações para imprimir no console uma mensagem no seguinte formato: "A jogadora Marta Silva tem 34 anos de idade".  
 ---
 3. Adicione ao objeto a chave `bestInTheWorld` e atribua a esta chave um `array` contendo as datas em que a jogadora Marta foi considerada a melhor do mundo.  
-```
+```js
 [2006, 2007, 2008, 2009, 2010, 2018]
 ```
 ---
@@ -24,7 +24,7 @@ let medals = { golden: 2, silver: 3 };
 ---
 ### For/in
 1. Usando o objeto abaixo, utilize For/in e imprima no console a mensagem `'Olá xxxxx'` para cada nome, substituindo o `xxxxx` pelo nome em questão.
-```
+```js
 let names = {
   person1: 'João',
   person2: 'Maria',
@@ -33,7 +33,7 @@ let names = {
 ```
 ---
 2. Usando o objeto abaixo, utilize For/in e imprima um `console.log` com as chaves e valores desse objeto.
-```
+```js
 let car = {
   model: 'A3 Sedan',
   manufacturer: 'Audi',
@@ -46,7 +46,7 @@ let car = {
 Que tal praticar um pouco?
 Pegue cada um dos exercícios da [primeira parte]() das nossas aulas de JavaScript e faça com que todos eles sejam funções de um mesmo arquivo. As variáveis que você define no começo de cada arquivo devem ser removidas e transformadas em parâmetros das funções. Por exemplo:
 O programa...
-```
+```js
 // Adição
 let a = 5;
 let b = 2;
@@ -54,7 +54,7 @@ let b = 2;
 a + b;
 ```
 ... se transforma em:
-```
+```js
 function sum(a, b) {
   return a + b;
 }
@@ -63,7 +63,7 @@ function sum(a, b) {
 ## Exercícios
 ### Parte I - Objetos e For/In
 Usando o objeto abaixo, faça os exercícios a seguir:
-```
+```js
 let info = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
@@ -72,12 +72,12 @@ let info = {
 ```
 ---
 1. Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. Valor esperado no console:
-```
+```js
 Bem-vinda, Margarida
 ```
 ---
 2. Insira no objeto uma nova propriedade com o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console. Valor esperado no console:
-```
+```js
 {
   personagem: 'Margarida',
   origem: 'Pato Donald',
@@ -87,7 +87,7 @@ Bem-vinda, Margarida
 ```
 ---
 3. Faça um `for/in` que mostre todas as chaves do objeto. Valor esperado no console:
-```
+```js
 personagem
 origem
 nota
@@ -95,7 +95,7 @@ recorrente
 ```
 ---
 4. Faça um novo `for/in` , mas agora mostre todos os valores das chaves do objeto. Valor esperado no console:
-```
+```js
 Margarida
 Pato Donald
 Namorada do personagem principal nos quadrinhos do Pato Donald
@@ -152,7 +152,7 @@ Valor esperado no retorno da função: 1+2+3+4+5 = `15` .
 Dicas:**  
 * Uma string é um array de caracteres, então cada elemento do array é uma letra.
 * O valor de cada numeral romano é:
-```
+```js
 | I   | 1    |
 | --- | ---- |
 | IV  | 4    |
@@ -172,13 +172,13 @@ Dicas:**
 * **Atenção! Quando você tem um número pequeno à direita de um número grande, eles devem ser somados. Exemplo: XI = 10 + 1 = 11. No entanto, se o número pequeno está à esquerda de um número maior que ele, ele deve ser subtraído. Exemplo: IX = 10 - 1 = 9.**
 ---
 2. Crie uma função chamada `arrayOfNumbers` que receberá a variável `vector` como parâmetro. Através de um loop `for` , percorra essa variável, busque os números pares e os adicione a um novo array que deverá ser retornado ao final pela pela função.
-```
+```js
 let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
 ```
 ---
 3. A partir do array de frutas `basket` , retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. Por exemplo, o array ['Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva'], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.  
 Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: `Sua cesta possui: x Melancias, x Abacates...`
-```
+```js
 const basket = [
   'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
   'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
