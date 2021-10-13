@@ -1,19 +1,29 @@
 import React, { Component } from 'react'
+import Name from './Name';
+import Techs from './Techs';
 
 class Form extends Component {
   constructor() {
     super();
 
     this.handleChange = this.handleChange.bind(this);
+    this.checkForErrors = this.checkForErrors.bind(this);
 
     this.state = {
-      techs: 'javascript',
+      techs: '',
       name: '',
       birthday: '',
       feedback: '',
       isLooking: false,
-      favPic: ''
+      favPic: '',
+      hasErrors: true,
     };
+  }
+
+  checkForErrors() {
+    const { techs, name } = this.state;
+    if (techs.length === 0 || name.length === 0) return true
+    return false
   }
 
   handleChange({ target }) {
@@ -22,30 +32,30 @@ class Form extends Component {
 
     this.setState({
       [name]: value,
+      hasErrors: this.checkForErrors()
     });
+
   }
 
   render() {
-    const { techs, name, birthday, feedback } = this.state
+    const { techs, name, birthday, feedback, hasErrors } = this.state
     return (
       <>
         <h2>Componentes controlados</h2>
         <form className="form">
-          <fieldset>
-            <legend>Professional</legend>
-            <label htmlFor="techs">Choose a technology: </label>
-            <select name="techs" id="techs" value={techs} onChange={this.handleChange}>
-              <option value="javascript">Javascript</option>
-              <option value="html">HTML</option>
-              <option value="css">CSS</option>
-              <option value="python">Python</option>
-            </select>
-          </fieldset>
+          <Techs
+            name={techs}
+            handleChange={this.handleChange}
+            hasErrors={hasErrors}
+          />
           <br />
           <fieldset>
             <legend>Personal</legend>
-            <label htmlFor="name">Your name: </label>
-            <input id="name" type="text" name="name" value={name} onChange={this.handleChange}></input>
+            <Name
+              name={name}
+              handleChange={this.handleChange}
+              hasErrors={hasErrors}
+            />
             <br />
             <br />
             <label htmlFor="birthday">Birthday: </label>
@@ -54,8 +64,9 @@ class Form extends Component {
           <br />
           <fieldset>
             <legend>Stuff</legend>
-            <span>Looking for job? </span>
-            <input type="checkbox" name="isLooking" onChange={this.handleChange} />
+            <label>Looking for job?
+              <input type="checkbox" name="isLooking" onChange={this.handleChange} />
+            </label>
             <label for="yes">yes</label><br />
             <p>Favorite picture:</p>
             <input type="file" name="favPic" onChange={this.handleChange} />
