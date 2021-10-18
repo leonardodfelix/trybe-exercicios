@@ -227,3 +227,6 @@ Caso a idade do usuário seja maior que 50, o componente NÃO deve ser renderiza
 **Dica!** Caso tenham dúvidas sobre como e onde fazer as chamadas de API, esse conteúdo pode ajudar!
 
 * [Onde devemos integrar chamadas de APIs?](https://pt-br.reactjs.org/docs/faq-ajax.html)
+
+Leonardo D Felix - Turma 15 Tribo A
+[My repo](https://github.com/leonardodfelix/exercises-lifecycle-step-by-step)
