@@ -1,53 +1,80 @@
 import React, { Component } from 'react'
+import Name from './Name';
+import Techs from './Techs';
 
 class Form extends Component {
   constructor() {
     super();
 
     this.handleChange = this.handleChange.bind(this);
+    this.checkForErrors = this.checkForErrors.bind(this);
 
     this.state = {
       techs: '',
       name: '',
       birthday: '',
-      feedback: ''
+      feedback: '',
+      isLooking: false,
+      favPic: '',
+      hasErrors: true,
     };
   }
 
+  checkForErrors() {
+    const { techs, name } = this.state;
+    if (techs.length === 0 || name.length === 0) return true
+    return false
+  }
+
   handleChange({ target }) {
+    const { name, type } = target;
+    const value = type === 'checkbox' ? target.checked : target.value;
+
     this.setState({
-      [target.name]: target.value,
+      [name]: value,
+      hasErrors: this.checkForErrors()
     });
+
   }
 
   render() {
-    const { techs, name, birthday } = this.state;
-
+    const { techs, name, birthday, feedback, hasErrors } = this.state
     return (
       <>
         <h2>Componentes controlados</h2>
         <form className="form">
-          <label htmlFor="techs">Choose a technology: </label>
-          <select name="techs" id="techs" value={this.state.techs} onChange={this.handleChange}>
-            <option value="javascript">Javascript</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="python">Python</option>
-          </select>
+          <Techs
+            name={techs}
+            handleChange={this.handleChange}
+            hasErrors={hasErrors}
+          />
           <br />
+          <fieldset>
+            <legend>Personal</legend>
+            <Name
+              name={name}
+              handleChange={this.handleChange}
+              hasErrors={hasErrors}
+            />
+            <br />
+            <br />
+            <label htmlFor="birthday">Birthday: </label>
+            <input type="date" id="birthday" name="birthday" value={birthday} onChange={this.handleChange}></input>
+          </fieldset>
           <br />
-          <label htmlFor="name">Your name: </label>
-          <input id="name" type="text" name="name" value={this.state.name} onChange={this.handleChange}></input>
-          <br />
-          <br />
-          <label htmlFor="birthday">Birthday: </label>
-          <input type="date" id="birthday" name="birthday" value={this.state.birthday} onChange={this.handleChange}></input>
-          <br />
-          <br />
-          Feedback:
-          <textarea id="feedback" name="feedback" rows="4" cols="50" maxLength="200" value={this.state.feedback} onChange={this.handleChange}>
-
-          </textarea>
+          <fieldset>
+            <legend>Stuff</legend>
+            <label>Looking for job?
+              <input type="checkbox" name="isLooking" onChange={this.handleChange} />
+            </label>
+            <label for="yes">yes</label><br />
+            <p>Favorite picture:</p>
+            <input type="file" name="favPic" onChange={this.handleChange} />
+            <br />
+            <p>Feedback:</p>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" maxLength="200" value={feedback} onChange={this.handleChange}>
+            </textarea>
+          </fieldset>
         </form>
       </>
     );

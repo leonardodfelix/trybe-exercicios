@@ -9,3 +9,7 @@ form {
   border-radius: 5px;
   max-width: 500px;
 }
+
+span {
+  color: red;
+}
