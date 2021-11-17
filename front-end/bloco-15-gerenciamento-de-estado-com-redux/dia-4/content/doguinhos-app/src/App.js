@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchDog } from './store';
 
-function App({ isFetching, src, fetchDog2 }) {
+function App({ isFetching, src, fetchDog }) {
   return (
     isFetching ? <p>Loading</p>
       : (
         <div style={{ width: 500 }}>
           <button
             style={{ display: 'block' }}
-            onClick={fetchDog2}
+            onClick={fetchDog}
             type="button"
           >
             Novo Doguinho
@@ -25,6 +25,6 @@ const mapStateToProps = (state) => ({
   isFetching: state.isFetching});
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchDog2: () => dispatch(fetchDog())});
+  fetchDog: () => dispatch(fetchDog())});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
