@@ -135,25 +135,24 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 17-1: _Context API do React_
 - [X] 17-2: _React Hooks - useState e useContext_
 - [X] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [X] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks](https://github.com/tryber/sd-015-a-project-starwars-planets-search/pull/2)_
 
 ##### Bloco 18: Projeto Final de Front-end
 
-- [ ] 18-1: _[Projeto - App de Receitas]()_
+- [X] 18-1: _[Projeto - App de Receitas](https://github.com/tryber/sd-015-a-project-recipes-app/tree/main-group-10)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 19: Introdução à SQL
+##### Bloco 19: Docker: Utilizando Containers
 
-- [ ] 19-1: _Banco de dados SQL_
-- [ ] 19-2: _Encontrando dados em um banco de dados_
-- [ ] 19-3: _Filtrando dados de forma específica_
-- [ ] 19-4: _Manipulando tabelas_
-- [ ] 19-5: _[Projeto - All For One]()_
+- [X] 19-1: _Containers Docker_
+- [X] 19-2: _EManipulação e Criação de Imagens no Docker_
+- [X] 19-3: _Orquestrando Containers com Docker Compose_
+- [X] 19-4: _[Projeto - Docker Todo-List](https://github.com/tryber/sd-015-a-project-docker-todo-list/pull/4)_
 
-##### Bloco 20: Funções SQL, Joins e Subqueries
+##### Bloco 20: Introdução à SQL
 
-- [ ] 20-1: _Funções mais usadas no SQL_
+- [ ] 20-1: _Encontrando dados em um banco de dados_
 - [ ] 20-2: _Descomplicando JOINs e UNIONs_
 - [ ] 20-3: _Stored Routines & Subqueries_
 - [ ] 20-4: _[Projeto - Vocabulary Booster]()_
