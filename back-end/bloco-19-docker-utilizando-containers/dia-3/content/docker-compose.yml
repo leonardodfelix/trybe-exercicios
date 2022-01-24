@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: ubuntu/nginx:latest
+    volumes:
+      - ./htmlpublic:/usr/share/nginx/html
+    ports:
+      - 8080:80
+    depends_on:
+      - mydb
+    
+  mydb:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db:/var/lib/mysql
