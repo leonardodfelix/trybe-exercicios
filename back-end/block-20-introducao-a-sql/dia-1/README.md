@@ -29,7 +29,7 @@ mysql> `FLUSH PRIVILEGES;`
 
 <aside>  
 
-💡 `mysql -u leonardo -p`  no need for `sudo` anymore  
+💡 `mysql -u user -p`  no need for `sudo` anymore  
 
 </aside>
 
