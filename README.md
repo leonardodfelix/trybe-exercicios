@@ -152,10 +152,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 20: Introdução à SQL
 
-- [ ] 20-1: _Encontrando dados em um banco de dados_
-- [ ] 20-2: _Descomplicando JOINs e UNIONs_
-- [ ] 20-3: _Stored Routines & Subqueries_
-- [ ] 20-4: _[Projeto - Vocabulary Booster]()_
+- [X] 20-1: _Banco de dados SQL_
+- [X] 20-2: _Encontrando dados em um banco de dados_
+- [X] 20-3: _Filtrando dados de forma específica_
+- [X] 20-4: _Manipulando tabelas_
+- [X] 20-5: _[Projeto - All For One](https://github.com/tryber/sd-015-a-mysql-all-for-one/pull/3)_
 
 ##### Bloco 21: Normalização e Modelagem de Banco de Dados
 
